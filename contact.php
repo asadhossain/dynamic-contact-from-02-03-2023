@@ -1,3 +1,16 @@
+
+<?php
+if (isset($_POST['btn'])){
+    
+$userName = $_POST ['username'];
+$email = $_POST ['email'];
+$password = $_POST ['password'];
+
+}
+
+?>
+
+
 <h3>User Name: <?php if(isset($userName)) { 
     echo $userName;
     }   ?></h3>

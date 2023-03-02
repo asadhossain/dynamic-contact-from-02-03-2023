@@ -1,14 +1,4 @@
 
-<?php
-if (isset($_POST['btn'])){
-    
-$userName = $_POST ['username'];
-$email = $_POST ['email'];
-$password = $_POST ['password'];
-
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,18 +9,10 @@ $password = $_POST ['password'];
 </head>
 <body>    
 
-<h3>User Name: <?php if(isset($userName)) { 
-    echo $userName;
-    }   ?></h3>
-<h3>Email: <?php if (isset($email)){
-    echo $email;
-} ?> </h3>
-<h3>Password: <?php if (isset($password)){
-    echo $password;
-} ?></h3>
 
 
-    <form action="" method= "POST">
+
+    <form action="contact.php" method= "POST">
 
     <label for=""> User Name</label> <br>
     <input type="text" name= "username"><br>
