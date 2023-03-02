@@ -1,9 +1,12 @@
 
 <?php
-if (isset($_POST['btn']))
-$userName = $_POST ['userName'];
+if (isset($_POST['btn'])){
+    
+$userName = $_POST ['username'];
 $email = $_POST ['email'];
 $password = $_POST ['password'];
+
+}
 
 ?>
 <!DOCTYPE html>
@@ -16,19 +19,25 @@ $password = $_POST ['password'];
 </head>
 <body>    
 
-<h3>User Name: <?php echo $userName;    ?></h3>
-<h3>Email: </h3>
-<h3>Password:</h3>
+<h3>User Name: <?php if(isset($userName)) { 
+    echo $userName;
+    }   ?></h3>
+<h3>Email: <?php if (isset($email)){
+    echo $email;
+} ?> </h3>
+<h3>Password: <?php if (isset($password)){
+    echo $password;
+} ?></h3>
 
 
-    <form action="contact.php" method= "POST">
+    <form action="" method= "POST">
 
     <label for=""> User Name</label> <br>
-    <input type="text" name= "userName"><br>
+    <input type="text" name= "username"><br>
     <label for=""> Email</label><br>
     <input type="email" name = "email"><br>
     <label for=""> Password</label><br>
-    <input type="Password" name= "Password"><br><br>
+    <input type="password" name= "password"><br><br>
     <input type ="submit" name = "btn" value = "Submit Data">
 
     </form>
